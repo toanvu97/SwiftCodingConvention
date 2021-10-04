@@ -1,17 +1,15 @@
 # The Official matechmobile.com Swift Style Guide.
 ### Updated for Swift 5
 
-Mục tiêu của chúng tôi là rõ ràng, nhất quán và ngắn gọn, theo thứ tự đó.
+Mục tiêu của chúng tôi là rõ ràng, nhất quán và ngắn gọn, dễ dàng cho người đọc.
 
 ## Table of Contents
 
 * [Using SwiftLint](#using-swiftlint)
 * [Naming](#naming)
-  * [Prose](#prose)
-  * [Delegates](#delegates)
+  * [File Name](#file-name)
+  * [Naming Delegate](#naming-delegate)
   * [Use Type Inferred Context](#use-type-inferred-context)
-  * [Generics](#generics)
-  * [Class Prefixes](#class-prefixes)
   * [Language](#language)
 * [Code Organization](#code-organization)
   * [Protocol Conformance](#protocol-conformance)
@@ -20,37 +18,20 @@ Mục tiêu của chúng tôi là rõ ràng, nhất quán và ngắn gọn, theo
 * [Spacing](#spacing)
 * [Comments](#comments)
 * [Classes and Structures](#classes-and-structures)
-  * [Use of Self](#use-of-self)
+  * [Self](#self)
   * [Protocol Conformance](#protocol-conformance)
   * [Computed Properties](#computed-properties)
-  * [Final](#final)
 * [Function Declarations](#function-declarations)
-* [Function Calls](#function-calls)
 * [Closure Expressions](#closure-expressions)
 * [Types](#types)
   * [Constants](#constants)
-  * [Static Methods and Variable Type Properties](#static-methods-and-variable-type-properties)
   * [Optionals](#optionals)
   * [Lazy Initialization](#lazy-initialization)
-  * [Type Inference](#type-inference)
-  * [Syntactic Sugar](#syntactic-sugar)
-* [Functions vs Methods](#functions-vs-methods)
 * [Memory Management](#memory-management)
   * [Extending Object Lifetime](#extending-object-lifetime)
 * [Access Control](#access-control)
 * [Control Flow](#control-flow)
-  * [Ternary Operator](#ternary-operator)
 * [Golden Path](#golden-path)
-  * [Failing Guards](#failing-guards)
-* [Semicolons](#semicolons)
-* [Parentheses](#parentheses)
-* [Multi-line String Literals](#multi-line-string-literals)
-* [No Emoji](#no-emoji)
-* [No #imageLiteral or #colorLiteral](#no-imageliteral-or-colorliteral)
-* [Organization and Bundle Identifier](#organization-and-bundle-identifier)
-* [Copyright Statement](#copyright-statement)
-* [Smiley Face](#smiley-face)
-* [References](#references)
 
 
 ## Using SwiftLint
@@ -498,7 +479,7 @@ let value = numbers
   .filter {$0 > 50}
   .map {$0 + 10}
 ```
-
+## Types
 ### Constants
 
 - Luôn sử dụng letthay vì varnếu giá trị của biến sẽ không thay đổi.
