@@ -176,7 +176,7 @@ public class URLSession {
 - Mỗi Extention nên được thiết lập một `// MARK: -` nói về nội dung của Extension
 
 ### Protocol Conformance
-Khi tuân thủ giao thức , Hãy phân từng phần mở rộng riêng cho cấc phương thức giao thức  
+Khi protocol conformance , Hãy phân từng phần mở rộng riêng cho các protocol methods  
 - Điều này giữ cho các phương thức liên quan được nhóm cùng với giao thức và đơn giản hoá các hướng dẫn 
 
 **Preferred**:
