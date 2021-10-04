@@ -109,7 +109,7 @@ let colour = "red"
 ```
 
 ### Initializers
-Tên của hàm khởi tạo phải tương ứng với thuộc tính được lưu trữ , Dùng self để phân biệt đối số của bộ khởi tạo với thuộc tính được lưu trữ .
+Tên của hàm khởi tạo phải tương ứng với thuộc tính được lưu trữ , Dùng self để phân biệt đối số của hàm khởi tạo với thuộc tính được lưu trữ .
 
 **Preferred**:
 ```swift
