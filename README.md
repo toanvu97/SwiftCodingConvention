@@ -519,7 +519,6 @@ enum Math {
 let hypotenuse = side * Math.root2
 
 ```
-**Note:** The advantage of using a case-less enumeration is that it can't accidentally be instantiated and works as a pure namespace.
 
 **Not Preferred**:
 ```swift
@@ -528,6 +527,245 @@ let root2 = 1.41421356237309504880168872
 
 let hypotenuse = side * root2 // what is root2?
 ```
+
+### Optionals
+
+Khai báo các biến bắt buộc `?` với các giá trị có thể `nil`
+
+Không trồng chéo 'if' đối với các biến check 
+
+Ví dụ :
+
+**Preferred**:
+```swift
+var subview: UIView?
+var volume: Double?
+
+// later on...
+if let subview = subview, let volume = volume {
+  // do something with unwrapped subview and volume
+}
+
+```
+
+**Not Preferred**:
+```swift
+var optionalSubview: UIView?
+var volume: Double?
+
+if let unwrappedSubview = optionalSubview {
+  if let realVolume = volume {
+    // do something with unwrappedSubview and realVolume
+  }
+}
+```
+
+### Lazy Initialization
+- Cân nhắc sử dụng lazy để kiểm soát chi tiết hơn đối với thời gian tồn tại của đối tượng 
+- Bạn có thể sử dụng bao đóng ngay lập tức {} ()
+
+Ví dụ :
+```swift
+lazy var locationManager = makeLocationManager()
+
+private func makeLocationManager() -> CLLocationManager {
+  let manager = CLLocationManager()
+  manager.desiredAccuracy = kCLLocationAccuracyBest
+  manager.delegate = self
+  manager.requestAlwaysAuthorization()
+  return manager
+}
+```
+
+### Type Annotation for Empty Arrays and Dictionaries
+Đối với các mảng và từ điển trống, hãy sử dụng chú thích . (Đối với một mảng hoặc từ điển được gán cho một ký tự lớn, nhiều dòng, hãy sử dụng chú thích .)
+
+**Preferred**:
+```swift
+var names: [String] = []
+var lookup: [String: Int] = [:]
+```
+
+**Not Preferred**:
+```swift
+var names = [String]()
+var lookup = [String: Int]()
+```
+
+## Memory Management
+Code không nên tạo các chu trình tham chiếu. Phân tích đồ thị đối tượng của bạn và ngăn chặn các chu kỳ mạnh với `weak` và `unowned` tham chiếu. Ngoài ra, hãy sử dụng các kiểu giá trị ( `struct`, `enum`) để ngăn chặn hoàn toàn các chu kỳ.
+
+### Extending object lifetime
+
+Kéo dài thời gian tồn tại của đối tượng bằng cách sử dụng thành ngữ `[weal self]` và `guard let self = self else {return}` idiom . `[weak self]` is preferred to `[unowned self]` . Thời gian tồn tại kéo dài rõ ràng được ưu tiên hơn so với chuỗi tùy chọn
+
+**Preferred**
+```swift
+resource.request().onComplete { [weak self] response in
+  guard let self = self else {
+    return
+  }
+  let model = self.updateModel(response)
+  self.updateUI(model)
+}
+```
+
+**Not Preferred**
+```swift
+// might crash if self is released before response returns
+resource.request().onComplete { [unowned self] response in
+  let model = self.updateModel(response)
+  self.updateUI(model)
+}
+```
+
+**Not Preferred**
+```swift
+// deallocate could happen between updating the model and updating UI
+resource.request().onComplete { [weak self] response in
+  let model = self?.updateModel(response)
+  self?.updateUI(model)
+}
+```
+### Access Control
+- Chú thích kiểm soát truy cập đầy đủ  . Using `private` and `fileprivate` , tuy nhiên , một cách thích hợp , làm tăng thêm sự rõ ràng và thúc đẩy sự đóng gói
+- Chỉ sử dụng `open` , `public` , and `internal` khi bạn yêu cầu đặc tả kiểm soát truy cập đầy đủ 
+- Sử dụng kiểm soát truy cập làm công cụ xác định thuộc tính hàng đầu, Những thứ duy nhất nên đến trước kiểm soát truy cập là `static` hoặc các thuộc tính như 
+`@IBAction`, `@IBOutlet` và `@discardableResult`
+
+**Preferred**:
+```swift
+private let message = "Great Scott!"
+
+class TimeMachine {  
+  private dynamic lazy var fluxCapacitor = FluxCapacitor()
+}
+```
+
+**Not Preferred**:
+```swift
+fileprivate let message = "Great Scott!"
+
+class TimeMachine {  
+  lazy dynamic private var fluxCapacitor = FluxCapacitor()
+}
+```
+
+## Control Flow 
+
+Dùng `for-in` hơn dùng `while`
+
+**Preferred**:
+```swift
+for _ in 0..<3 {
+  print("Hello three times")
+}
+
+for (index, person) in attendeeList.enumerated() {
+  print("\(person) is at position #\(index)")
+}
+
+for index in stride(from: 0, to: items.count, by: 2) {
+  print(index)
+}
+
+for index in (0...3).reversed() {
+  print(index)
+}
+```
+
+**Not Preferred**:
+```swift
+var i = 0
+while i < 3 {
+  print("Hello three times")
+  i += 1
+}
+
+
+var i = 0
+while i < attendeeList.count {
+  let person = attendeeList[i]
+  print("\(person) is at position #\(i)")
+  i += 1
+}
+```
+
+## Golden Path
+
+Khi viết Code với `if`, Không lồng các `if` câu lệnh. Nhiều câu lệnh trả về là OK. Các `guard` sinh ra để làm việc này.
+
+**Preferred**:
+```swift
+func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies {
+  guard let context = context else {
+    throw FFTError.noContext
+  }
+  guard let inputData = inputData else {
+    throw FFTError.noInputData
+  }
+
+  // use context and input to compute the frequencies
+  return frequencies
+}
+```
+
+**Not Preferred**:
+```swift
+func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies {
+  if let context = context {
+    if let inputData = inputData {
+      // use context and input to compute the frequencies
+
+      return frequencies
+    } else {
+      throw FFTError.noInputData
+    }
+  } else {
+    throw FFTError.noContext
+  }
+}
+```
+
+**Preferred**:
+```swift
+guard 
+  let number1 = number1,
+  let number2 = number2,
+  let number3 = number3 
+else {
+  fatalError("impossible")
+}
+// do something with numbers
+```
+
+**Not Preferred**:
+```swift
+if let number1 = number1 {
+  if let number2 = number2 {
+    if let number3 = number3 {
+      // do something with numbers
+    } else {
+      fatalError("impossible")
+    }
+  } else {
+    fatalError("impossible")
+  }
+} else {
+  fatalError("impossible")
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
