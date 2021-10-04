@@ -56,7 +56,7 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
  
 ### Naming Component , Function , Actions
 - Đặt tên cho các biến : Loại mục ( button, label,... ) + lời giải thích 
-  - Ví dụ : `buttonSignUp` , `LabelName`
+  - Ví dụ : `buttonSignUp` , `labelName`
 - Đặt tên cho function : Động từ giải thích nhiệm vụ hoặc mục đích của nó 
   - Ví dụ : `verifyCredentials()`, `loadHomePage()`
 - Đặt tên cho Actions : Một động từ ở quá khứ giải thích hành động 
