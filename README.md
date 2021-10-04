@@ -50,7 +50,6 @@ Bạn có thể tham khảo và sử dụng pod 'swiftLint' để kiểm tra l�
 
 Ví dụ :
 File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swift`
-  - File tên MyType có hàm hỗ trợ cao cấp hơn cũng được đặt tên `MyType.swift`
   - MyType bổ sung thêm MyProtocol được đặt tên `MyType+MyProtoCol.swift`
   - MyType chứa thêm phần mở rộng đặt tên : `MyType+Additions.swift`
   - Một tệp chưa những thứ không liên quan ( Như một tập hợp các hàm toán học ) có thể đặt tên Math.swift
@@ -78,7 +77,7 @@ func didSelectName(namePicker: NamePickerViewController, name: String)
 func namePickerShouldReload() -> Bool
 ```
 ### Use Type Inferred Context
-Sử dụng ngữ cảnh suy luận của Xcode để viết mã ngắn gọn hơn , rõ ràng 
+Sử dụng Type Inferred Context của Xcode để viết mã ngắn gọn hơn , rõ ràng 
 
 **Preferred**:
 ```swift
