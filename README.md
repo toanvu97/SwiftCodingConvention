@@ -43,7 +43,7 @@ Bạn có thể tham khảo và sử dụng pod 'swiftLint' để kiểm tra l�
 - Đặt tên phải rõ ràng 
 - Ưu tiên rõ ràng hơn ngắn gọn 
 - Viết hoa chữ cái đầu với Class , Type , Protocol . Ví dụ : `ProductionLine`
-- Viết thường chữ cái đầu với tất cả thứ còn lại như tên biến , tên Component , ... Ví dụ : viewMain , buttonTap
+- Viết thường chữ cái đầu với tất cả thứ còn lại như tên biến , tên Component , ... Ví dụ : `viewMain` , `buttonTap`
 - Đặt tên dựa trên vai trò , chức năng 
 - Không dùng các thuật ngữ gây nhầm lẫn cho người đọc
 - Đặt tên không được viết tắt 
@@ -52,7 +52,7 @@ Ví dụ :
 File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swift`
   - MyType bổ sung thêm MyProtocol được đặt tên `MyType+MyProtoCol.swift`
   - MyType chứa thêm phần mở rộng đặt tên : `MyType+Additions.swift`
-  - Một tệp chưa những thứ không liên quan ( Như một tập hợp các hàm toán học ) có thể đặt tên Math.swift
+  - Một tệp chưa những thứ không liên quan ( Như một tập hợp các hàm toán học ) có thể đặt tên `Math.swift`
  
 ### Naming Component , Function , Actions
 - Đặt tên cho các biến : Loại mục ( button, label,... ) + lời giải thích 
