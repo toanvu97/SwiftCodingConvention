@@ -57,26 +57,26 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
  
 ### Naming Component Function Actions
 
-- Đặt tên cho biến theo quy tắc : Tiền tố ( button, label,... ) + lời giải thích 
+- Đặt tên cho biến theo quy tắc : lời giải thích +  Hậu tố ( button, label,... )
   - Ví dụ : `button`(Tiền tố) + `SignUp`(Giải thích) = `buttonSignUp`  ,
    `label`(Tiền tố) + `Name`(Giải thích) = `labelName`
 
 List Component :
 
-| Kiểu          | Tiền tố       |		Ví dụ               |
+| Kiểu          | Hậu tố       |		Ví dụ               |
 |---------------| --------------|-----------------------|
-| UIButton        | `button`	      | `buttonNext`            |
-| UILabel        | `label`	      | `labelName`            |
-| UISlider        | `slider`	      | `sliderSize`            |
-| UISwitch        | `switch`	      | `switchName`            |
-| Page Control        | `pageControl`	      | `pageControlBanner`            |
-| UIImageView     | `image`	    | `imageStar`          |
-| Navigation bar          | `navigation	`     | `navigationHome`       |
-| UIView    | `view`	    | `viewBackground`         |
-| UiTextView      | `textView`       | `textViewUserName`      |
-| UITextField      | `textField`       | `textFieldUserName`      |
-| UITableView      | `tableView`       | `tableViewContent`      |
-| UICollectionView      | `collectionView`       | `collectionViewContent`      |
+| UIButton        | `button`	      | `nextButton`            |
+| UILabel        | `label`	      | `nameLabel`            |
+| UISlider        | `slider`	      | `sizeSlider`            |
+| UISwitch        | `switch`	      | `nameSwitch`            |
+| Page Control        | `pageControl`	      | `bannerPageControl`            |
+| UIImageView     | `image`	    | `starImage`          |
+| Navigation bar          | `navigation	`     | `homeNavigation`       |
+| UIView    | `view`	    | `backgroundView`         |
+| UiTextView      | `textView`       | `userNameTextView`      |
+| UITextField      | `textField`       | `userNameTextField`      |
+| UITableView      | `tableView`       | `contentTableView`      |
+| UICollectionView      | `collectionView`       | `contentCollectionView`      |
 
 Quy ước đặt tên cho Icon và Image trong Assets :
 
@@ -86,11 +86,11 @@ Quy ước đặt tên cho Icon và Image trong Assets :
 | Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
 | Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
 | Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
-| Background                      | `bg_dialog`        | `bg_dialog_info.png`         |
+| Background                      | `bg_`              | `bg_info.png`                |
 
 
-- Đặt tên cho function theo quy tắc : Động từ giải thích nhiệm vụ hoặc mục đích của nó + `Hậu tố`
-  - Ví dụ : khi đặt tên cho hàm load dữ liệu màn HomePage : `loadData`( giải thích cho hành động ) + `HomePage` (Hậu tố) = `loadDataHomePage()`
+- Đặt tên cho function : 
+  - 
 - Đặt tên cho Actions theo quy tắc : Một động từ ở quá khứ giải thích hành động 
   - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUp`(tên hành động) + `Button`(Tên Kiểu) + `Tapped`(Hành động dạng quá khứ) = `signUpButtonTapped()`
  
