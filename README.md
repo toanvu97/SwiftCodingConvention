@@ -404,10 +404,10 @@ extension Circle: CustomStringConvertible {
 Ví dụ trên nói lên các quy tắc sau :
  + Chỉ định kiểu cho các thuộc tính, biến, hằng số, khai báo đối số và các câu lệnh khác có dấu cách sau dấu hai chấm nhưng không phải trước dấu hai chấm, ví dụ x: Int, và Circle: Shape.
  + Xác định nhiều biến và cấu trúc trên một dòng nếu chúng có chung mục đích / ngữ cảnh.
- + Thụt lề các định nghĩa getter và setter và các trình quan sát thuộc tính.
- + Không thêm các công cụ sửa đổi chẳng hạn như `internal` khi chúng đã là mặc định. Tương tự, không lặp lại công cụ sửa đổi quyền truy cập khi ghi đè một phương thức.
- + Tổ chức chức năng bổ sung (ví dụ: in) trong phần mở rộng.
- + Ẩn các chi tiết triển khai, không được chia sẻ, chẳng hạn như centerStringbên trong tiện ích mở rộng bằng cách sử dụng privatekiểm soát truy cập.
+ + Thụt lề các định nghĩa getter và setter .
+ + Không thêm các công cụ sửa đổi chẳng hạn như `internal` khi chúng đã là mặc định. Tương tự, không lặp lại công cụ sửa đổi quyền truy cập khi ghi đè một method.
+ + Tổ chức chức năng bổ sung (ví dụ: in) trong Extension.
+ + Ẩn các chi tiết triển khai, không được chia sẻ, chẳng hạn như `centerString` bên trong Extension bằng cách sử dụng `private` kiểm soát truy cập.
 
 ### Self
 
@@ -455,7 +455,7 @@ func reticulateSplines(
   // reticulate code goes here
 }
 ```
-Sử dụng `Void` thay vì `()` cho kết quả đóng hàm.
+Sử dụng `Void` thay vì `()` cho kết quả `func()` .
 
 ```swift
 func updateConstraints() -> Void {
@@ -515,12 +515,12 @@ let value = numbers
 ## Types
 ### Constants
 
-- Luôn sử dụng `let` thay vì varnếu giá trị của biến sẽ không thay đổi.
+- Luôn sử dụng `let` thay vì `var` nếu giá trị của biến sẽ không thay đổi.
 
-Mẹo: Một kỹ thuật tốt là xác định mọi thứ bằng cách sử dụng `let` và chỉ thay đổi nó thành `var` nếu trình biên dịch nhắc nhở!
+Mẹo: Một kỹ thuật tốt là xác định mọi thứ bằng cách sử dụng `let` và chỉ thay đổi nó thành `var` nếu Xcode nhắc nhở!
 
 - Để khai báo một thuộc tính kiểu như một hằng số, chỉ cần sử dụng `static let`
-- Các thuộc tính kiểu được khai báo theo cách này thường được ưu tiên hơn các hằng số toàn cục vì chúng dễ phân biệt hơn với các thuộc tính thể hiện
+- Các thuộc tính kiểu được khai báo theo cách này thường được ưu tiên hơn các hằng số toàn cục vì chúng dễ phân biệt hơn với các thuộc tính .
 
 Ví dụ :
 **Preferred**:
@@ -546,7 +546,7 @@ let hypotenuse = side * root2 // what is root2?
 
 Khai báo các biến bắt buộc `?` với các giá trị có thể `nil`
 
-Không trồng chéo 'if' đối với các biến check 
+Không trồng chéo 'if' đối với các biến check 'nil'
 
 Ví dụ :
 
