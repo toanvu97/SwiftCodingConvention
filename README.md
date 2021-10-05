@@ -8,6 +8,7 @@ Mục tiêu của chúng tôi là rõ ràng, nhất quán và ngắn gọn, dễ
 * [Using SwiftLint](#using-swiftlint)
 * [Naming](#naming)
   * [File Name](#file-name)
+  * [Naming Component Function Actions](#naming-component-function-actions)
   * [Naming Delegate](#naming-delegate)
   * [Use Type Inferred Context](#use-type-inferred-context)
   * [Language](#language)
@@ -54,7 +55,7 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
   - MyType chứa thêm phần mở rộng đặt tên : `MyType+Additions.swift`
   - Một tệp chưa những thứ không liên quan ( Như một tập hợp các hàm toán học ) có thể đặt tên `Math.swift`
  
-### Naming Component , Function , Actions
+### Naming Component Function Actions
 
 - Đặt tên cho biến theo quy tắc : Tiền tố ( button, label,... ) + lời giải thích 
   - Ví dụ : `button`(Tiền tố) + `SignUp`(Giải thích) = `buttonSignUp`  ,
@@ -88,10 +89,10 @@ Quy ước đặt tên cho Icon và Image trong Assets :
 | Background                      | `bg_dialog`        | `bg_dialog_info.png`         |
 
 
-- Đặt tên cho function theo quy tắc : Động từ giải thích nhiệm vụ hoặc mục đích của nó 
-  - Ví dụ : `verifyCredentials()`, `loadHomePage()`
+- Đặt tên cho function theo quy tắc : Động từ giải thích nhiệm vụ hoặc mục đích của nó + `Hậu tố`
+  - Ví dụ : khi đặt tên cho hàm load dữ liệu màn HomePage : `loadData`( giải thích cho hành động ) + `HomePage` (Hậu tố) = `loadDataHomePage()`
 - Đặt tên cho Actions theo quy tắc : Một động từ ở quá khứ giải thích hành động 
-  - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUpButtonTapped()`
+  - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUp`(tên hành động) + `Button`(Tên Kiểu) + `Tapped`(Hành động dạng quá khứ) = `signUpButtonTapped()`
  
 ### Naming Delegate
 Khi đặt tên phương thức delegate , tuân theo quy tắc : tiền tố delegate + tên phương thức 
