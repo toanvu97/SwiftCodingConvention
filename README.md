@@ -380,7 +380,7 @@ Ví dụ trên nói lên các quy tắc sau :
 ### Self
 
 - Để ngắn gọn , Hãy tránh sử dụng `self` vì swift không bắt buộc .
-- Nếu Xcode bắt sử dụng thì hãy sử dụng (trong các bao `@escaping` đóng hoặc trong các trình khởi tạo để phân biệt các thuộc tính khỏi các đối số)
+- Nếu Xcode bắt sử dụng thì hãy sử dụng (trong các `@escaping` đóng hoặc trong các trình khởi tạo để phân biệt các thuộc tính khỏi các đối số)
 
 ### Computed Properties
 - Nếu 1 thuộc tính chỉ đọc , hãy bỏ qua mệnh get . Mệnh get chỉ được yêu cầu khi một mệnh đề đã đặt được cung cấp.
@@ -483,11 +483,11 @@ let value = numbers
 ## Types
 ### Constants
 
-- Luôn sử dụng letthay vì varnếu giá trị của biến sẽ không thay đổi.
+- Luôn sử dụng `let` thay vì varnếu giá trị của biến sẽ không thay đổi.
 
 Mẹo: Một kỹ thuật tốt là xác định mọi thứ bằng cách sử dụng `let` và chỉ thay đổi nó thành `var` nếu trình biên dịch nhắc nhở!
 
-- Để khai báo một thuộc tính kiểu như một hằng số, chỉ cần sử dụng static let
+- Để khai báo một thuộc tính kiểu như một hằng số, chỉ cần sử dụng `static let`
 - Các thuộc tính kiểu được khai báo theo cách này thường được ưu tiên hơn các hằng số toàn cục vì chúng dễ phân biệt hơn với các thuộc tính thể hiện
 
 Ví dụ :
