@@ -177,7 +177,7 @@ public class URLSession {
 
 ### Protocol Conformance
 Khi protocol conformance , Hãy phân từng phần mở rộng riêng cho các protocol methods  
-- Điều này giữ cho các phương thức liên quan được nhóm cùng với giao thức và đơn giản hoá các hướng dẫn 
+- Điều này giữ cho các phương thức liên quan được nhóm cùng với protocol
 
 **Preferred**:
 ```swift
@@ -324,9 +324,11 @@ let numbers = [ 1, 2, 3 ]
 
 ## Classes and Structures
 
-Các Class có ` ngữ nghĩa tham chiếu `. Sử dụng các lớp cho những thứ có danh tính hoặc một vòng đời cụ thể. Bạn sẽ mô hình một người như một lớp vì hai đối tượng người là hai thứ khác nhau. Chỉ vì hai người có cùng tên và ngày sinh, không có nghĩa là họ là cùng một người. Nhưng ngày sinh của người đó sẽ là một cấu trúc vì ngày 3 tháng 3 năm 1950 giống với bất kỳ đối tượng ngày nào khác cho ngày 3 tháng 3 năm 1950. Bản thân ngày đó không có danh tính.
+Remember, structs have value semantics. Use structs for things that do not have an identity. An array that contains [a, b, c] is really the same as another array that contains [a, b, c] and they are completely interchangeable. It doesn't matter whether you use the first array or the second, because they represent the exact same thing. That's why arrays are structs.
 
-Đôi khi, mọi thứ nên là cấu trúc nhưng cần phải tuân theo AnyObjecthoặc được mô hình hóa lịch sử như các lớp đã có ( NSDate, NSSet). Cố gắng làm theo các hướng dẫn này càng chặt chẽ càng tốt.
+Classes have reference semantics. Use classes for things that do have an identity or a specific life cycle. You would model a person as a class because two person objects are two different things. Just because two people have the same name and birthdate, doesn't mean they are the same person. But the person's birthdate would be a struct because a date of 3 March 1950 is the same as any other date object for 3 March 1950. The date itself doesn't have an identity.
+
+Sometimes, things should be structs but need to conform to AnyObject or are historically modeled as classes already (NSDate, NSSet). Try to follow these guidelines as closely as possible.
 
 - Bỏ qua định nghĩa ta đi đến với ví dụ cụ thể :
 
@@ -577,7 +579,7 @@ Code không nên tạo các chu trình tham chiếu. Phân tích đồ thị đ�
 
 ### Extending object lifetime
 
-Kéo dài thời gian tồn tại của đối tượng bằng cách sử dụng thành ngữ `[weal self]` và `guard let self = self else {return}` idiom . `[weak self]` is preferred to `[unowned self]` . Thời gian tồn tại kéo dài rõ ràng được ưu tiên hơn so với chuỗi tùy chọn
+Kéo dài thời gian tồn tại của đối tượng bằng cách sử dụng thành ngữ `[weal self]` và `guard let self = self else {return}` idiom . `[weak self]` is preferred to `[unowned self]`.
 
 **Preferred**
 ```swift
