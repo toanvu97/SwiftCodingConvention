@@ -707,7 +707,7 @@ while i < attendeeList.count {
 
 ## Golden Path
 
-Khi viết Code với `if`, Không lồng các `if` câu lệnh. Nhiều câu lệnh trả về là OK. Các `guard` sinh ra để làm việc này.
+Khi viết Code với `if`, Không lồng các câu lệnh `if`. Các `guard` sinh ra để làm việc này.
 
 **Preferred**:
 ```swift
