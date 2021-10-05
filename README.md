@@ -65,18 +65,18 @@ List Component :
 
 | Kiểu          | Tiền tố       |		Ví dụ               |
 |---------------| --------------|-----------------------|
-| Button        | `button`	      | `buttonNext`            |
-| Label        | `label`	      | `labelName`            |
-| Slider        | `slider`	      | `sliderSize`            |
-| Switch        | `switch`	      | `switchName`            |
+| UIButton        | `button`	      | `buttonNext`            |
+| UILabel        | `label`	      | `labelName`            |
+| UISlider        | `slider`	      | `sliderSize`            |
+| UISwitch        | `switch`	      | `switchName`            |
 | Page Control        | `pageControl`	      | `pageControlBanner`            |
-| ImageView     | `image`	    | `imageStar`          |
+| UIImageView     | `image`	    | `imageStar`          |
 | Navigation bar          | `navigation	`     | `navigationHome`       |
-| View    | `view`	    | `viewBackground`         |
-| TextView      | `textView`       | `textViewUserName`      |
-| TextField      | `textField`       | `textFieldUserName`      |
-| TableView      | `tableView`       | `tableViewContent`      |
-| CollectionView      | `collectionView`       | `collectionViewContent`      |
+| UIView    | `view`	    | `viewBackground`         |
+| UiTextView      | `textView`       | `textViewUserName`      |
+| UITextField      | `textField`       | `textFieldUserName`      |
+| UITableView      | `tableView`       | `tableViewContent`      |
+| UICollectionView      | `collectionView`       | `collectionViewContent`      |
 
 Quy ước đặt tên cho Icon và Image trong Assets :
 
