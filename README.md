@@ -58,8 +58,8 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
 ### Naming Component Function Actions
 
 - Đặt tên cho biến theo quy tắc : lời giải thích +  Hậu tố ( button, label,... )
-  - Ví dụ : `button`(Tiền tố) + `SignUp`(Giải thích) = `buttonSignUp`  ,
-   `label`(Tiền tố) + `Name`(Giải thích) = `labelName`
+  - Ví dụ :  `SignUp`(Giải thích) + `button`(Hậu tố) = `signUpButton`  ,
+    `Name`(Giải thích) + `label`(Hậu tố) = `nameLabel`
 
 List Component :
 
