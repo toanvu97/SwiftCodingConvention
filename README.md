@@ -90,7 +90,9 @@ Quy ước đặt tên cho Icon và Image trong Assets :
 
 
 - Đặt tên cho function : 
-  - 
+  - Nó phải bắt đầu bằng chữ thường.
+  - Nó phải là một động từ như main (), print (), println ().
+  - Nếu tên chứa nhiều từ, hãy bắt đầu nó bằng một chữ thường, sau đó là một chữ hoa, chẳng hạn như actionPerformed ().
 - Đặt tên cho Actions theo quy tắc : Một động từ ở quá khứ giải thích hành động 
   - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUp`(tên hành động) + `Button`(Tên Kiểu) + `Tapped`(Hành động dạng quá khứ) = `signUpButtonTapped()`
  
