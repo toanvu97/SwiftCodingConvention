@@ -55,12 +55,43 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
   - Một tệp chưa những thứ không liên quan ( Như một tập hợp các hàm toán học ) có thể đặt tên `Math.swift`
  
 ### Naming Component , Function , Actions
-- Đặt tên cho các biến : Loại mục ( button, label,... ) + lời giải thích 
-  - Ví dụ : `buttonSignUp` , `labelName`
-- Đặt tên cho function : Động từ giải thích nhiệm vụ hoặc mục đích của nó 
+
+- Đặt tên cho biến theo quy tắc : Tiền tố ( button, label,... ) + lời giải thích 
+  - Ví dụ : `button`(Tiền tố) + `SignUp`(Giải thích) = `buttonSignUp`  ,
+   `label` + `Name` = `labelName`
+
+List Component :
+
+| Kiểu          | Tiền tố       |		Ví dụ               |
+|---------------| --------------|-----------------------|
+| Button        | `button`	      | `buttonNext`            |
+| Label        | `label`	      | `labelName`            |
+| Slider        | `slider`	      | `sliderSize`            |
+| Switch        | `switch`	      | `switchName`            |
+| Page Control        | `pageControl`	      | `pageControlBanner`            |
+| ImageView     | `image`	    | `imageStar`          |
+| Navigation bar          | `navigation	`     | `navigationHome`       |
+| View    | `view`	    | `viewBackground`         |
+| TextView      | `textView`       | `textViewUserName`      |
+| TextField      | `textField`       | `textFieldUserName`      |
+| TableView      | `tableView`       | `tableViewContent`      |
+| CollectionView      | `collectionView`       | `collectionViewContent`      |
+
+Quy ước đặt tên cho Icon và Image trong Assets :
+
+| Kiểu                            | Tiền tố            | Ví dụ                        |
+| --------------------------------| ----------------   | ---------------------------- | 
+| Icons                           | `ic_`              | `ic_star.png`                |
+| Menu icons and Action Bar icons | `ic_menu`          | `ic_menu_archive.png`        |
+| Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
+| Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
+| Background                      | `bg_dialog`        | `bg_dialog_info.png`         |
+
+
+- Đặt tên cho function theo quy tắc : Động từ giải thích nhiệm vụ hoặc mục đích của nó 
   - Ví dụ : `verifyCredentials()`, `loadHomePage()`
-- Đặt tên cho Actions : Một động từ ở quá khứ giải thích hành động 
-  - Ví dụ : `signUpButtonTapped()`
+- Đặt tên cho Actions theo quy tắc : Một động từ ở quá khứ giải thích hành động 
+  - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUpButtonTapped()`
  
 ### Naming Delegate
 Khi đặt tên phương thức delegate , tuân theo quy tắc : tiền tố delegate + tên phương thức 
