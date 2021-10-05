@@ -59,7 +59,7 @@ File chứa 1 loại duy nhất MyType thì được đặt tên là `MyType.swi
 
 - Đặt tên cho biến theo quy tắc : Tiền tố ( button, label,... ) + lời giải thích 
   - Ví dụ : `button`(Tiền tố) + `SignUp`(Giải thích) = `buttonSignUp`  ,
-   `label` + `Name` = `labelName`
+   `label`(Tiền tố) + `Name`(Giải thích) = `labelName`
 
 List Component :
 
