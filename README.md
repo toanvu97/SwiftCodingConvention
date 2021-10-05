@@ -406,7 +406,7 @@ Ví dụ trên nói lên các quy tắc sau :
  + Xác định nhiều biến và cấu trúc trên một dòng nếu chúng có chung mục đích / ngữ cảnh.
  + Thụt lề các định nghĩa getter và setter .
  + Không thêm các công cụ sửa đổi chẳng hạn như `internal` khi chúng đã là mặc định. Tương tự, không lặp lại công cụ sửa đổi quyền truy cập khi ghi đè một method.
- + Tổ chức chức năng bổ sung (ví dụ: in) trong Extension.
+ + Tổ chức chức năng bổ sung (e.g. printing) trong Extension.
  + Ẩn các chi tiết triển khai, không được chia sẻ, chẳng hạn như `centerString` bên trong Extension bằng cách sử dụng `private` kiểm soát truy cập.
 
 ### Self
@@ -611,7 +611,7 @@ Code không nên tạo các chu trình tham chiếu. Phân tích đồ thị đ�
 
 ### Extending object lifetime
 
-Kéo dài thời gian tồn tại của đối tượng bằng cách sử dụng thành ngữ `[weal self]` và `guard let self = self else {return}` idiom . `[weak self]` is preferred to `[unowned self]`.
+Kéo dài thời gian tồn tại của đối tượng bằng cách sử dụng `[weal self]` và `guard let self = self else {return}` . `[weak self]` được ưu tiên hơn `[unowned self]`.
 
 **Preferred**
 ```swift
