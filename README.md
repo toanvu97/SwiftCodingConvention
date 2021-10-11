@@ -353,27 +353,19 @@ let numbers = [ 1, 2, 3 ]
 
 - Comment trước Outlet 
 ```
-//
 // MARK - Outlet
-// 
 ```
 - Comment khi khai báo biến
 ```
-//
 // MARK - Value variable
-// 
 ```
 - Comment trước Outlet Action
 ```
-//
 // MARK - Outlet Action
-//
 ```
 - Comment Life Cycle
 ```
-//
 // MARK - Life Cycle
-//
 ```
 Life Cycle gồm : LoadView , ViewDidLoad , viewWillAppear , viewDidAppear , viewWillDisappear , viewDidDisappear
 
