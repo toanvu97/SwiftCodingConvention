@@ -612,7 +612,7 @@ private func makeLocationManager() -> CLLocationManager {
 ```
 
 ### Type Annotation for Empty Arrays and Dictionaries
-Đối với các mảng và từ điển trống, hãy sử dụng chú thích . (Đối với một mảng hoặc từ điển được gán cho một ký tự lớn, nhiều dòng, hãy sử dụng chú thích .)
+Đối với các Array và Dictionaries, hãy sử dụng chú thích . (Đối với một Array hoặc Dictionaries được gán cho một ký tự lớn, nhiều dòng, hãy sử dụng chú thích .)
 
 **Preferred**:
 ```swift
