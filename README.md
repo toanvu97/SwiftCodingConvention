@@ -357,11 +357,15 @@ let numbers = [ 1, 2, 3 ]
 ```
 - Comment khi khai báo biến
 ```
-// MARK - Value variable
+// MARK - Variables And Properties
 ```
 - Comment trước Outlet Action
 ```
-// MARK - Outlet Action
+// MARK - Action
+```
+- Comment trước Function
+```
+// MARK - Function
 ```
 - Comment Life Cycle
 ```
