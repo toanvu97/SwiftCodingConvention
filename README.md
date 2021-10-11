@@ -353,23 +353,23 @@ let numbers = [ 1, 2, 3 ]
 
 - Comment trước Outlet 
 ```
-// MARK - Outlet
+// MARK: - Outlet
 ```
 - Comment khi khai báo biến
 ```
-// MARK - Variables And Properties
+// MARK: - Variables And Properties
 ```
 - Comment trước Outlet Action
 ```
-// MARK - Action
+// MARK: - Action
 ```
 - Comment trước Function
 ```
-// MARK - Function
+// MARK: - Function
 ```
 - Comment Life Cycle
 ```
-// MARK - Life Cycle
+// MARK: - Life Cycle
 ```
 Life Cycle gồm : LoadView , ViewDidLoad , viewWillAppear , viewDidAppear , viewWillDisappear , viewDidDisappear
 
