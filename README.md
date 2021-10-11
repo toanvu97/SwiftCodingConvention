@@ -369,6 +369,13 @@ let numbers = [ 1, 2, 3 ]
 // MARK - Outlet Action
 //
 ```
+- Comment Life Cycle
+```
+//
+// MARK - Life Cycle
+//
+```
+Life Cycle gồm : LoadView , ViewDidLoad , viewWillAppear , viewDidAppear , viewWillDisappear , viewDidDisappear
 
 - Khi cần thiết , hãy sử dụng 'comment' để giải thích tại sao đoạn mã này lại làm được điều đó .
 
