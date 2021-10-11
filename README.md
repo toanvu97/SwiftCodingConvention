@@ -93,9 +93,7 @@ Quy ước đặt tên cho Icon và Image trong Assets :
   - Nó phải bắt đầu bằng chữ thường.
   - Nó phải là một động từ như main (), print (), println ().
   - Nếu tên chứa nhiều từ, hãy bắt đầu nó bằng một chữ thường, sau đó là một chữ hoa, chẳng hạn như actionPerformed ().
-- Đặt tên cho Actions theo quy tắc : Một động từ ở quá khứ giải thích hành động 
-  - Ví dụ : Khi tạo 1 Actions cho button sign up : `signUp`(tên hành động) + `Button`(Tên Kiểu) + `Tapped`(Hành động dạng quá khứ) = `signUpButtonTapped()`
- 
+
 ### Naming Delegate
 Khi đặt tên phương thức delegate , tuân theo quy tắc : tiền tố delegate + tên phương thức 
 
@@ -352,6 +350,26 @@ let numbers = [ 1, 2, 3 ]
 ```
 
 ## Comments
+
+- Comment trước Outlet 
+```
+//
+// MARK - Outlet
+// 
+```
+- Comment khi khai báo biến
+```
+//
+// MARK - Value variable
+// 
+```
+- Comment trước Outlet Action
+```
+//
+// MARK - Outlet Action
+//
+```
+
 - Khi cần thiết , hãy sử dụng 'comment' để giải thích tại sao đoạn mã này lại làm được điều đó .
 
 - Tránh sử dụng các chú thích kiểu (`/* ... */`) . Ưu tiên sử dụng dấu gạch kép hoặc ba .
