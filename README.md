@@ -70,7 +70,7 @@ List Component :
 | UISlider        | `slider`	      | `sizeSlider`            |
 | UISwitch        | `switch`	      | `nameSwitch`            |
 | Page Control        | `pageControl`	      | `bannerPageControl`            |
-| UIImageView     | `image`	    | `starImage`          |
+| UIImageView     | `imageView`	    | `starImageView`          |
 | Navigation bar          | `navigation	`     | `homeNavigation`       |
 | UIView    | `view`	    | `backgroundView`         |
 | UiTextView      | `textView`       | `userNameTextView`      |
